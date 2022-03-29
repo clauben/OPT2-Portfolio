@@ -2,7 +2,7 @@
 {
     public class BookRental
     {
-        public double CalculatePrice(int stayDays, Rentel rentel)
+        public virtual double CalculatePrice(int stayDays, Rentel rentel)
         {
             double totalPrice =  rentel.Price * stayDays;
             return totalPrice;
