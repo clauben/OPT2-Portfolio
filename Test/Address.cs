@@ -11,5 +11,12 @@ namespace Test
         public string City { get; set; }
         public string Country { get; set; }
         public string PostalCode { get; set; }
+
+        public Address(string city, string country, string postalCode)
+        {
+            City = city;
+            Country = country;
+            PostalCode = postalCode;
+        }      
     }
 }

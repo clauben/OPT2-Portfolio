@@ -25,5 +25,11 @@ namespace Test
             Toilets = toilets;
             Price = price;
         }
+
+        public virtual double CalculatePrice(int stayDays, Rentel rentel)
+        {
+            double totalPrice = rentel.Price * stayDays;
+            return totalPrice;
+        }
     }
 }

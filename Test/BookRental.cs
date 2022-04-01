@@ -1,18 +1,10 @@
 ﻿namespace Test
 {
-    public class BookRental
+    public class BookRental : IBookRental
     {
-        public virtual double CalculatePrice(int stayDays, Rentel rentel)
+        public string Booking(string datum, int stayDays, int persons, Rentel rentel, Person person)
         {
-            double totalPrice =  rentel.Price * stayDays;
-            return totalPrice;
-        }
-
-        public string Booking(int month, int day, int year, int stayDays, int persons, Rentel rentel, Person person)
-        {
-            double price = CalculatePrice(stayDays, rentel);
-            string reservation = $"Reservation: {rentel.Name} - {day}/{month}/{year} - {stayDays} day - {persons} people - €{price}.";
-            person.Reservations.Add(reservation);
+            string reservation = $"Reservation: {rentel.Name} - {datum} - {stayDays} day - {persons} people";
             return reservation;
         }
     }
